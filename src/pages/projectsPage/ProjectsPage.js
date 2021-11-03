@@ -4,7 +4,6 @@ import './ProjectsPage.scss';
 import { WEB_PROJECT_ITEMS, MOBILE_PROJECT_ITEMS, PROJECT_FILTERS } from '../../data/static-data';
 import PageTitle from '../../components/pages/pageTitle/pageTitle';
 import ProjectItem from '../../components/pages/projects/projectItem/ProjectItem';
-import LoadingSpinner from '../../components/uı/loadingSpinner/LoadingSpinner';
 
 const ProjectsPage = () => {
     const webProjectItems = useState(WEB_PROJECT_ITEMS)[0];
@@ -12,16 +11,18 @@ const ProjectsPage = () => {
     const projectFilters = useState(PROJECT_FILTERS)[0];
     const [activeProjectFilter, setActiveProjectFilter] = useState(PROJECT_FILTERS[0]);
     const [activeFilterIndex, setActiveFilterIndex] = useState(0);
-    const [fakeLoading, setFakeLoading] = useState(true);
+    const [displayProjectItems, setDisplayProjectItems] = useState(false);    // Opacity transition
 
     useEffect(() => {        
-        setTimeout(() => { setFakeLoading(false);}, 750);
-    }, [activeFilterIndex]);
+        setTimeout(() => { setDisplayProjectItems(true);}, 400);
+    }, [activeProjectFilter]);
 
     const setSelectedFilterActive = (filterIndex) => {
-        setFakeLoading(true);
+        setDisplayProjectItems(false);
         setActiveFilterIndex(filterIndex);
-        setActiveProjectFilter(projectFilters[filterIndex]);
+        setTimeout(() => {
+            setActiveProjectFilter(projectFilters[filterIndex]);
+        }, 400);
     }
 
     return (
@@ -44,27 +45,17 @@ const ProjectsPage = () => {
                         ))
                     }
                 </div>
-                {
-                    fakeLoading
-                        ? <>
-                            <div className="projectsPage-loadingSpinnerContainer">
-                                <LoadingSpinner width='5rem' height='5rem' />
-                            </div>
-                        </>
-                        : <>
-                            <div className="projectsPage-projectItems">
-                                { 
-                                    activeProjectFilter.filterType === 'web'
-                                        ? webProjectItems.map((item, index) => (
-                                            <ProjectItem key={item.title} data={item} index={index} type="web"/>
-                                        ))  
-                                        : mobileProjectItems.map((item, index) => (
-                                            <ProjectItem key={item.title} data={item} index={index} type="mobile"/>
-                                        ))  
-                                }
-                            </div>
-                        </>
-                }
+                <div className={`projectsPage-projectItems ${displayProjectItems ? 'display' : ''}`}>
+                    { 
+                        activeProjectFilter.filterType === 'web'
+                            ? webProjectItems.map((item, index) => (
+                                <ProjectItem key={item.title} data={item} index={index} type="web"/>
+                            ))  
+                            : mobileProjectItems.map((item, index) => (
+                                <ProjectItem key={item.title} data={item} index={index} type="mobile"/>
+                            ))  
+                    }
+                </div>
             </div>
         </section>
     );
