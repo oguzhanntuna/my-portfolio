@@ -12,14 +12,14 @@ const ProjectsPage = () => {
     const projectFilters = useState(PROJECT_FILTERS)[0];
     const [activeProjectFilter, setActiveProjectFilter] = useState(PROJECT_FILTERS[0]);
     const [activeFilterIndex, setActiveFilterIndex] = useState(0);
-    const [fakeLoading, setFakeLoading] = useState(false);
+    const [fakeLoading, setFakeLoading] = useState(true);
 
-    useEffect(() => {
-        setFakeLoading(true);
-        setTimeout(() => { setFakeLoading(false) }, 750);
+    useEffect(() => {        
+        setTimeout(() => { setFakeLoading(false);}, 750);
     }, [activeFilterIndex]);
 
     const setSelectedFilterActive = (filterIndex) => {
+        setFakeLoading(true);
         setActiveFilterIndex(filterIndex);
         setActiveProjectFilter(projectFilters[filterIndex]);
     }
@@ -44,12 +44,15 @@ const ProjectsPage = () => {
                         ))
                     }
                 </div>
-                    {
-                        fakeLoading
-                            ? <div className="projectsPage-loadingSpinnerContainer">
+                {
+                    fakeLoading
+                        ? <>
+                            <div className="projectsPage-loadingSpinnerContainer">
                                 <LoadingSpinner width='5rem' height='5rem' />
                             </div>
-                            : <div className="projectsPage-projectItems">
+                        </>
+                        : <>
+                            <div className="projectsPage-projectItems">
                                 { 
                                     activeProjectFilter.filterType === 'web'
                                         ? webProjectItems.map((item, index) => (
@@ -60,7 +63,8 @@ const ProjectsPage = () => {
                                         ))  
                                 }
                             </div>
-                    }
+                        </>
+                }
             </div>
         </section>
     );

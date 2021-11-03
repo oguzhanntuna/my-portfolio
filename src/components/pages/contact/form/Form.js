@@ -73,7 +73,7 @@ const CustomForm = () => {
             <Button 
                 buttonTitle={
                     loading 
-                        ? <LoadingSpinner width='2.5rem' height='2.5rem' borderWidth='.6rem' loadingColor='#000' />
+                        ? <LoadingSpinner width='1.8rem' height='1.8rem' borderWidth='.6rem' loadingColor='#000' />
                         :  mailStatusText
                 } 
                 disabled={loading || mailStatusText !== 'Send'}
