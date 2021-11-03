@@ -18,11 +18,11 @@ const ProjectsPage = () => {
     }, [activeProjectFilter]);
 
     const setSelectedFilterActive = (filterIndex) => {
-        setDisplayProjectItems(false);
-        setActiveFilterIndex(filterIndex);
-        setTimeout(() => {
-            setActiveProjectFilter(projectFilters[filterIndex]);
-        }, 400);
+        if (filterIndex !== activeFilterIndex) {
+            setDisplayProjectItems(false);
+            setActiveFilterIndex(filterIndex);
+            setTimeout(() => { setActiveProjectFilter(projectFilters[filterIndex]); }, 400);
+        }
     }
 
     return (
