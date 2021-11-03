@@ -6,6 +6,7 @@ import EmailKey from '../../../../env/emailkey';
 import Button from '../button/Button';
 import Input from '../input/Input';
 import TextArea from '../textArea/TextArea';
+import LoadingSpinner from '../../../uı/loadingSpinner/LoadingSpinner';
 
 const CustomForm = () => {
     const { USER_ID, SERVICE_ID, TEMPLATE_ID} = EmailKey;
@@ -13,7 +14,7 @@ const CustomForm = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
-    const [mailStatusText, setMailStatusText] = useState('');
+    const [mailStatusText, setMailStatusText] = useState('Send');
 
     useEffect(() => {
         init(USER_ID);
@@ -33,12 +34,12 @@ const CustomForm = () => {
             .then(() => {
                 setLoading(false);
                 setMailStatusText('Email sent!');
-                setTimeout(() => setMailStatusText(''), 3000);
+                setTimeout(() => setMailStatusText('Send'), 2000);
             })
             .catch(() => {
                 setLoading(false);
                 setMailStatusText(`Email could not be sent!`);
-                setTimeout(() => setMailStatusText(''), 3000);
+                setTimeout(() => setMailStatusText('Send'), 2000);
             });
         resetFormData();
     }
@@ -72,11 +73,10 @@ const CustomForm = () => {
             <Button 
                 buttonTitle={
                     loading 
-                        ? 'Loading...' 
-                        :  mailStatusText !== ''
-                            ? mailStatusText
-                            : 'Send'
+                        ? <LoadingSpinner width='2.5rem' height='2.5rem' borderWidth='.6rem' loadingColor='#000' />
+                        :  mailStatusText
                 } 
+                disabled={loading || mailStatusText !== 'Send'}
             />
         </form>
     );

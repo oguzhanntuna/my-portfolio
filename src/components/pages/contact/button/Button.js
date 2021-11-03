@@ -7,7 +7,7 @@ const Button = props => {
 
     return (
         <div className="buttonContainer">
-            <button>{buttonTitle}</button>
+            <button disabled={props.disabled}>{buttonTitle}</button>
         </div>
     );
 };
