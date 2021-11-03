@@ -1,0 +1,22 @@
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+        width: 100%;
+        padding: 1.5rem 6rem;
+        border-radius: 5px;
+        color:#fff;
+        background: linear-gradient(to right, #6617cb, #bf3a30);
+        font-size: 2.5rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .2s all;
+
+        &:hover {
+            color: #181A18;
+        }
+    }
+}

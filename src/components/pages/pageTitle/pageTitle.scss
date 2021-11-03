@@ -1,0 +1,24 @@
+.pageTitle {
+    position: relative;
+    text-align: center;
+    font-size: 12rem;
+    font-weight: 600;
+    letter-spacing: -.8rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+
+    span {
+        padding: 0 1rem;
+        background: linear-gradient(to right, #6617cb, #bf3a30);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .pageTitle {
+        font-size: 9.6rem;
+    }
+}

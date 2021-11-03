@@ -1,0 +1,89 @@
+.skillsPage {
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #181A18;
+
+    .techStack {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        font-size: 2rem;
+
+        .techStackContainer {
+            padding: 4rem;
+            background-color: #000;
+            border-radius: 7.5px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+
+            &--advanced {
+                margin-bottom: 4rem;
+            }
+
+            &--intermediate {
+                flex: 1;
+                margin-right: 2rem;
+            }
+
+            &--beginner {
+                flex: 1;
+            }
+
+            label {
+                font-size: 3.2rem;
+                text-decoration: underline;
+            }
+
+            &-skills {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 1rem;
+            }
+        }
+
+        &-techStackBottomContainer {
+            display: flex;
+        }
+    }
+
+    .gradientBorder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 2rem 1rem 0;
+        border-radius: 0.75rem;
+        background: linear-gradient(to right, #6617cb, #bf3a30);
+
+        span {
+            padding: 1rem;
+            margin: .2rem;
+            background-color: #000;
+            border-radius: 0.75rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .skillsPage {
+        width: 100%;
+
+        .techStack {
+            .techStackContainer {
+                margin-bottom: 4rem;
+                border-radius: 0;
+
+                &--intermediate {
+                    margin-right: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-techStackBottomContainer {
+                display: unset;
+            }
+        }
+    }
+}

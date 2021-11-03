@@ -1,0 +1,50 @@
+.header {
+    height: 6rem;
+    padding-top: 2rem;
+    font-size: 2rem;
+    background: linear-gradient(to right, #6617cb, #bf3a30);
+
+    .navigation {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 2rem 2rem 0 2rem;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            list-style: none;
+            
+
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                transition: .2s all;
+
+                &:link, &:visited {
+                    font-weight: bold;
+                    color: #ffffff;
+                }
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+
+.waveContainer {
+    height: 10rem;
+    overflow: hidden;
+    background: linear-gradient(to right, #6617cb, #bf3a30);
+
+    .waveSvg {
+        height: 100%; 
+        width: 100%;
+
+        .wavePath {
+            stroke: none; 
+            fill: #181A18;
+        }
+    }
+}
