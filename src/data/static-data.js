@@ -120,6 +120,7 @@ const MOBILE_PROJECT_ITEMS = [
         'A basic ecommerce application. User can see list of products and purchase it.',
         [
             'React Native',
+            'Redux',
             'Firebase'
         ],
         [
@@ -140,7 +141,8 @@ const MOBILE_PROJECT_ITEMS = [
         ],
         'Using static meal data to show off its ingredients and recipes.',
         [
-            'React Native'
+            'React Native',
+            'Redux'
         ],
         [
             'Favorites section.',

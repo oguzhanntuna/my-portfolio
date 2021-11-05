@@ -52,6 +52,9 @@
         position: relative;
         width: 100%;
         margin-top: .4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 7.5px;
         border-top-left-radius: 0;
         z-index: 1;
@@ -61,8 +64,8 @@
         }
 
         img {
-            width: 100%;
-            height: 100%;
+            width: 99%;
+            height: 99%;
             object-fit: cover;
             border-radius: 7.5px;
             border-top-left-radius: 0;
@@ -72,7 +75,7 @@
 
     &-contentCover {
         width: 100%;
-        height: calc(100% - .5rem);
+        height: 102%;
         position: absolute;
         font-size: 1.6rem;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8));
