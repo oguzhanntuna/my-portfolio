@@ -26,7 +26,7 @@ const ContactPage = () => {
                             <div className="icon">
                                 <img src={PhoneIcon} alt="linkedin" />
                             </div>
-                            <span className="contactPage-contactNo">+90 534-919-4376</span>
+                            <span className="contactPage-contactNo">+1 (602) 875-9271</span>
                         </div>
                         <div className="contactPage-emailContainer">
                             <div className="icon">
@@ -38,7 +38,7 @@ const ContactPage = () => {
                             <div className="icon">
                                 <img src={LocationIcon} alt="linkedin" />
                             </div>
-                            <span className="contactPage-location">Istanbul, Turkey.</span>
+                            <span className="contactPage-location">Florence, Arizona, USA</span>
                         </div>
                     </div>
                 </div>
