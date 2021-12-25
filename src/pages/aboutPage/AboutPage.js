@@ -54,7 +54,7 @@ const AboutPage = () => {
                 </div>
                 <div className="aboutPage-currentStatusBorder">
                     <div className="aboutPage-currentStatus">
-                        <p className="aboutPage-currentStatus-statusText">My latest work experience was at <span className="highlightedText singleLine">PATH - Product and Software House</span> and among the many projects within PATH, I am at <span className="highlightedText singleLine">Tuttur (tuttur.com)</span> project which is a betting site.</p>
+                        <p className="aboutPage-currentStatus-statusText">My latest work experience was at <span className="highlightedText singleLine">PATH - Product and Software House</span> and among the many projects within PATH, I was at <span className="highlightedText singleLine">Tuttur (tuttur.com)</span> project which is a betting site.</p>
                         <Link to="contact"><p className="aboutPage-currentStatus-openToWork highlightedText">Open to new opportunities →</p></Link>
                     </div>
                 </div>
