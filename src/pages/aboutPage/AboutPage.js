@@ -19,7 +19,7 @@ const AboutPage = () => {
                         <span>Hi,</span>
                         <span>I'm Oguzhan Tuna,</span>
                         <span>Front-End Developer.</span>
-                        <span>Graduate of Electronics and Communication Engineering. Moreover, a self-taught Front-End Developer.</span>
+                        <span>B.Sc. in Electronics and Communication Engineering. Moreover, a self-taught Front-End Developer.</span>
                     </div>
                     <div className="aboutPage-shortDescriptionContainer-iconContainer">
                         <div className="linkedinBorder gradientBorder">
@@ -54,7 +54,7 @@ const AboutPage = () => {
                 </div>
                 <div className="aboutPage-currentStatusBorder">
                     <div className="aboutPage-currentStatus">
-                        <p className="aboutPage-currentStatus-statusText">My latest work experience was at <a href="https://path.com.tr/" target="_blank" rel="noreferrer"><span className="highlightedText singleLine">PATH - Product and Software House</span></a> and among the many projects within PATH, I was at <a href="https://www.tuttur.com/" target="_blank" rel="noreferrer"><span className="highlightedText singleLine">Tuttur (tuttur.com)</span></a> project which is a betting site.</p>
+                        <p className="aboutPage-currentStatus-statusText">My most recent work experience was at <a href="https://path.com.tr/" target="_blank" rel="noreferrer"><span className="highlightedText singleLine">PATH - Product and Software House</span></a> and among the many projects within PATH, I was at <a href="https://www.tuttur.com/" target="_blank" rel="noreferrer"><span className="highlightedText singleLine">Tuttur (tuttur.com)</span></a> project which is a betting site.</p>
                         <Link to="contact"><p className="aboutPage-currentStatus-openToWork highlightedText">Open to new opportunities →</p></Link>
                     </div>
                 </div>
