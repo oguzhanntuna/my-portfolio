@@ -48,7 +48,7 @@ const AboutPage = () => {
                         </p>
                     </div>
                     <div className="aboutPage-detailedDescription-rightPart">
-                        <p>Therefore, I decided to go with the front-end development and achived to turn my hobby to a full-time job.</p>
+                        <p>Therefore, I decided to go with the front-end development and achieved to turn my hobby to a full-time job.</p>
                         <p className="highlightedText">I like to code things from scratch, design my own ideas and enjoy bringing them to life.</p>
                     </div>
                 </div>
