@@ -189,6 +189,16 @@
             text-transform: uppercase;
             font-weight: bold;
             cursor: pointer;
+
+            span {
+                transition: all .2s; 
+            }
+
+            &:hover {
+                span {
+                    margin-right: .5rem;
+                }
+            }
         }
     }
 }

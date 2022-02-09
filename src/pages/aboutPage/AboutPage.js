@@ -54,8 +54,9 @@ const AboutPage = () => {
                 </div>
                 <div className="aboutPage-currentStatusBorder">
                     <div className="aboutPage-currentStatus">
-                        <p className="aboutPage-currentStatus-statusText">My most recent work experience was at <a href="https://path.com.tr/" target="_blank" rel="noreferrer"><span className="highlightedText singleLine">PATH - Product and Software House</span></a> and among the many projects within PATH, I was at <a href="https://www.tuttur.com/" target="_blank" rel="noreferrer"><span className="highlightedText singleLine">Tuttur (tuttur.com)</span></a> project which is a betting site.</p>
-                        <Link to="contact"><p className="aboutPage-currentStatus-openToWork highlightedText">Open to new opportunities →</p></Link>
+                        {/* My most recent work experience was at  */}
+                        <p className="aboutPage-currentStatus-statusText">Currently I am working at <a href="https://www.resolvetech.com/" target="_blank" rel="noreferrer"><span className="highlightedText singleLine">Resolve Tech Solutions</span></a> as a contractor with a direct client <a href="https://www.cbre.com/" target="_blank" rel="noreferrer"><span className="highlightedText singleLine">CBRE.</span></a></p>
+                        <Link to="contact"><p className="aboutPage-currentStatus-openToWork highlightedText"><span>Open to new opportunities</span> →</p></Link>
                     </div>
                 </div>
             </div>
