@@ -6,6 +6,7 @@ import WebProject3 from '../assets/web-project-3.png';
 import WebProject4 from '../assets/web-project-4.png';
 import WebProject5 from '../assets/web-project-5.png';
 import WebProject6 from '../assets/web-project-6.png';
+import WebProject7 from '../assets/web-project-7.png';
 import MobileProject1A from '../assets/mobile-project-1a.png';
 import MobileProject1B from '../assets/mobile-project-1b.png';
 import MobileProject1C from '../assets/mobile-project-1c.png';
@@ -15,7 +16,30 @@ import MobileProject2C from '../assets/mobile-project-2c.png';
 
 const WEB_PROJECT_ITEMS = [
     new ProjectItem(
-        '01 ToDo-List With Authentication',
+        '01 Ticket Selling Website',
+        'web',
+        WebProject7,
+        'A complete ticket selling website. Note: Ticket dates are outdated, used only as placeholders to be same as in image.',
+        [
+            'React.js',
+            'Typescript',
+            'Redux',
+            'Sass',
+            'Firebase'
+        ],
+        [
+            'Different layouts for desktop and mobile',
+            'Sign in / Login feature.',
+            'Past Orders section',
+            'Favorites section',
+            'Search functionality',
+            'Image slider'
+        ],
+        'https://github.com/oguzhanntuna/tonight-ticket-selling-webApp',
+        'https://tonight-ticket-selling-website.web.app/'
+    ),
+    new ProjectItem(
+        '02 To Do List With Authentication',
         'web',
         WebProject1,
         'A basic to do application.',
@@ -34,7 +58,7 @@ const WEB_PROJECT_ITEMS = [
         'https://to-do-app-aa457.web.app/'
     ),
     new ProjectItem(
-        '02 Burger Builder',
+        '03 Burger Builder',
         'web',
         WebProject2,
         'An application to create your own burger and order it.',
@@ -51,7 +75,7 @@ const WEB_PROJECT_ITEMS = [
         'https://react-my-burger-3b52a.web.app/'
     ),
     new ProjectItem(
-        '03 Marvel Characters',
+        '04 Marvel Characters',
         'web',
         WebProject3,
         'Showing off all marvel characters and some additional info of them by using Marvel’s API.',
@@ -66,7 +90,7 @@ const WEB_PROJECT_ITEMS = [
         'https://marvel-characters-3c050.web.app/'
     ),
     new ProjectItem(
-        '04 Shopping Mall Website',
+        '05 Shopping Mall Website',
         'web',
         WebProject4,
         'Using static data to show off some shopping mall campaigns and stores. User also can search for a certain brand to see which floor it is located.',
@@ -81,7 +105,7 @@ const WEB_PROJECT_ITEMS = [
         'https://indoor-navigation-system-bbcce.web.app/0'
     ),
     new ProjectItem(
-        '05 Trillo Static Website',
+        '06 Trillo Static Website',
         'web',
         WebProject5,
         'A project to learn more about CSS Flexbox. Only a static website, there is no functionality',
@@ -94,7 +118,7 @@ const WEB_PROJECT_ITEMS = [
         'https://trillo-static.web.app/'
     ),
     new ProjectItem(
-        '06 Nexter Static Website',
+        '07 Nexter Static Website',
         'web',
         WebProject6,
         'A project to learn more about CSS Grid. Only a static website, there is no functionality',
