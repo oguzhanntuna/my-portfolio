@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProjectItem.scss';
+
+import { useDeviceType } from '../../../../customHooks/useDeviceType';
+import { useClickedOutside } from '../../../../customHooks/useClickedOutside';
 
 import GithubIcon from '../../../../assets/icons/logo-github.svg';
 import WebsiteIcon from '../../../../assets/icons/logo-website.svg';
@@ -18,6 +21,15 @@ const ProjectItem = props => {
         index,
         type
     } = props;
+    const deviceType = useDeviceType();
+    const { ref, isClickedOutside } = useClickedOutside();
+    const [showContentCover, setShowContentCover] = useState(false);
+
+    useEffect(() => {
+        if (isClickedOutside) {
+            setShowContentCover(false);
+        }
+    }, [isClickedOutside]);
 
     const renderProjectItemImage = () => {
         if (type === 'mobile' && image instanceof Array) {
@@ -34,12 +46,43 @@ const ProjectItem = props => {
         return <img src={image} alt={`project-${index}`} />;
     }
 
+    const renderContentCover = () => (
+        <div className="projectItem-contentCover">
+            <div className="projectItem-description">
+                {description}
+            </div>
+            <div className="projectItem-infoContainer">
+                <div className="projectItem-additionalFeatures">
+                    {
+                        additionalFeatures.length > 0 &&
+                        <>
+                            <div className="projectItem-additionalFeatures-title">Additional Features:</div>
+                            <ul className="projectItem-additionalFeatures-info">
+                                { additionalFeatures.map(item => <li>{item}</li>) }
+                            </ul>
+                        </>
+                    }   
+                </div>
+                <div className="projectItem-technologiesUsed">
+                    <div className="projectItem-technologiesUsed-title">Technologies Used:</div>
+                    <div className="projectItem-technologiesUsed-info">
+                        { technologiesUsed.map(item => <div className="gradientBorder"><span>{item}</span></div>) }
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+
     return (
         <div className={`projectItem projectItem--${type}`}>
             <label className="projectItem-title">
                 {title}
             </label>
-            <div className="projectItem-content">
+            <div 
+                className="projectItem-content" 
+                onClick={() => setShowContentCover(true)}
+                ref={ref}
+            >
                 <div className="projectItem-iconsContainer">
                     {
                         githubLink !== ''
@@ -60,30 +103,13 @@ const ProjectItem = props => {
                             : <></>
                     }
                 </div>
-                <div className="projectItem-contentCover">
-                    <div className="projectItem-description">
-                        {description}
-                    </div>
-                    <div className="projectItem-infoContainer">
-                        <div className="projectItem-additionalFeatures">
-                            {
-                                additionalFeatures.length > 0 &&
-                                <>
-                                    <div className="projectItem-additionalFeatures-title">Additional Features:</div>
-                                    <ul className="projectItem-additionalFeatures-info">
-                                        { additionalFeatures.map(item => <li>{item}</li>) }
-                                    </ul>
-                                </>
-                            }   
-                        </div>
-                        <div className="projectItem-technologiesUsed">
-                            <div className="projectItem-technologiesUsed-title">Technologies Used:</div>
-                            <div className="projectItem-technologiesUsed-info">
-                                { technologiesUsed.map(item => <div className="gradientBorder"><span>{item}</span></div>) }
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {
+                    deviceType === 'desktop'
+                        ? renderContentCover()
+                        : showContentCover
+                            ? renderContentCover()
+                            : <></>
+                }
                 {renderProjectItemImage()}
             </div>
         </div>

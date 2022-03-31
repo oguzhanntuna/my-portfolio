@@ -106,7 +106,8 @@
         overflow-y: scroll;
 
         &::-webkit-scrollbar {
-            height: 12px;
+            width: 2px;
+            height: 10px;
             border-radius: 10px;
     
             &-track {
@@ -218,8 +219,13 @@
             border-top-left-radius: 0;
         }
 
+        &-content {
+            cursor: pointer;
+        }
+
         &-contentCover {
             border-radius: 0;
+            opacity: 1;
         }
 
         &--mobile {
