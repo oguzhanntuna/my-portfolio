@@ -24,6 +24,7 @@ const WEB_PROJECT_ITEMS = [
             'React.js',
             'Typescript',
             'Redux',
+            'Javascript',
             'Sass',
             'Firebase'
         ],
@@ -47,6 +48,7 @@ const WEB_PROJECT_ITEMS = [
             'React.js',
             'Firebase',
             'Typescript',
+            'Javascript',
             'Sass'
         ],
         [
@@ -64,8 +66,9 @@ const WEB_PROJECT_ITEMS = [
         'An application to create your own burger and order it.',
         [
             'React.js',
-            'Firebase',
-            'Redux'
+            'Redux',
+            'Javascript',
+            'Firebase'
         ],
         [
             'Past Orders section.',
@@ -81,6 +84,7 @@ const WEB_PROJECT_ITEMS = [
         'Showing off all marvel characters and some additional info of them by using Marvel’s API.',
         [
             'React.js',
+            'Javascript',
             'Sass'
         ],
         [
@@ -96,6 +100,7 @@ const WEB_PROJECT_ITEMS = [
         'Using static data to show off some shopping mall campaigns and stores. User also can search for a certain brand to see which floor it is located.',
         [
             'React.js',
+            'Javascript',
             'Sass'
         ],
         [

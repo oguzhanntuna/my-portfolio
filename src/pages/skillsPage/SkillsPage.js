@@ -6,7 +6,7 @@ import PageTitle from '../../components/pages/pageTitle/pageTitle';
 const SkillsPage = () => {
     const advancedSkills = ['React.js', 'Redux', 'TypeScript', 'JavaScript', 'Sass', 'HTML5', 'CSS3'];
     const intermediateSkills = ['React Native', 'Firebase', 'Git'];
-    const beginnerSkills = ['RxJS', 'Bootstrap', 'jQuery', 'C#', 'Unity' ,'Python' ];
+    const beginnerSkills = ['React Testing Library', 'Jest', 'RxJS', 'Bootstrap', 'jQuery', 'C#', 'Unity' ,'Python' ];
 
     return (
         <section className="skillsPage">

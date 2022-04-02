@@ -223,6 +223,12 @@
             cursor: pointer;
         }
 
+        &-iconsContainer {
+            &--active {
+                top: -4.8rem;
+            }
+        }
+
         &-contentCover {
             border-radius: 0;
             opacity: 1;
