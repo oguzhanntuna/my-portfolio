@@ -108,6 +108,7 @@ const ProjectItem = props => {
             >
                 <div className={`
                     projectItem-iconsContainer
+                    ${deviceType === 'desktop' ? 'projectItem-iconsContainer--desktop' : 'projectItem-iconsContainer--mobile'}
                     ${showContentCover ? 'projectItem-iconsContainer--active' : ''}
                 `}>
                     {
