@@ -150,6 +150,7 @@ const MOBILE_PROJECT_ITEMS = [
         [
             'React Native',
             'Redux',
+            'Javascript',
             'Firebase'
         ],
         [
@@ -171,7 +172,8 @@ const MOBILE_PROJECT_ITEMS = [
         'Using static meal data to show off its ingredients and recipes.',
         [
             'React Native',
-            'Redux'
+            'Redux',
+            'Javascript'
         ],
         [
             'Favorites section.',
