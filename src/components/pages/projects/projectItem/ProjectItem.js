@@ -46,29 +46,6 @@ const ProjectItem = props => {
         return <img src={image} alt={`project-${index}`} />;
     }
 
-    const renderIconsContaner = () => (
-        <div className="projectItem-iconsContainer">
-            {
-                githubLink !== ''
-                    ? (
-                        <a className="icon" href={githubLink} target="_blank" rel="noreferrer" >
-                            <img src={GithubIcon} alt="github" />
-                        </a>
-                    )
-                    : <></>
-            }
-            {
-                websiteLink !== ''
-                    ? (
-                        <a className="icon icon-marginLeft" href={websiteLink} target="_blank" rel="noreferrer" >
-                            <img src={WebsiteIcon} alt="website" />
-                        </a>
-                    )
-                    : <></>
-            }
-        </div>
-    );
-
     const renderContentCover = () => (
         <div className="projectItem-contentCover">
             <div className="projectItem-description">

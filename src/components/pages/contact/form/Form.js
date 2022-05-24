@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import{ init, send } from 'emailjs-com';
 import './Form.scss';
 
-import { EmailKey } from '../../../../env/emailkey';
+import { EmailKey } from '../../../../.env/emailkey';
 import Button from '../button/Button';
 import Input from '../input/Input';
 import TextArea from '../textArea/TextArea';
-import LoadingSpinner from '../../../uı/loadingSpinner/LoadingSpinner';
+import LoadingSpinner from '../../../ui/loadingSpinner/LoadingSpinner';
 
 const CustomForm = () => {
     const { USER_ID, SERVICE_ID, TEMPLATE_ID} = EmailKey;
