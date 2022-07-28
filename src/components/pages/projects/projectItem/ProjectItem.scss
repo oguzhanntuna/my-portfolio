@@ -141,6 +141,10 @@
             li {
                 margin: 1rem 0 0 2rem;
                 max-width: 80%;
+
+                &:last-child {
+                    margin-bottom: 1rem;
+                }
             }
         }
     }
