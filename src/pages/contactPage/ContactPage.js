@@ -38,7 +38,7 @@ const ContactPage = () => {
                             <div className="icon">
                                 <img src={LocationIcon} alt="linkedin" />
                             </div>
-                            <span className="contactPage-location">Florence, Arizona, USA</span>
+                            <span className="contactPage-location">Miami, FL, USA</span>
                         </div>
                     </div>
                 </div>
