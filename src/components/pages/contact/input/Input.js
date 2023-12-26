@@ -1,15 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import './Input.scss';
+import "./Input.scss";
 
-const input = props => {
-    const { value, onChange, placeholder, type } = props;
+const input = (props) => {
+  const { value, onChange, placeholder, type } = props;
 
-    return (
-        <div className="inputContainer">
-            <input value={value} onChange={onChange} type={type} placeholder={placeholder} required />
-        </div>
-    )
-}
+  return (
+    <div className="inputContainer">
+      <input
+        value={value}
+        onChange={onChange}
+        type={type}
+        placeholder={placeholder}
+        required
+      />
+    </div>
+  );
+};
 
 export default input;

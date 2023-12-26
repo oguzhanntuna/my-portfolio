@@ -1,18 +1,18 @@
-import { useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useState } from "react";
 
 export const useDeviceType = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useLayoutEffect(() => {
     const updateSize = () => {
-        setWindowWidth(window.innerWidth);
-    }
+      setWindowWidth(window.innerWidth);
+    };
 
-    window.addEventListener('resize', updateSize);
+    window.addEventListener("resize", updateSize);
     updateSize();
 
-    return () => window.removeEventListener('resize', updateSize);
+    return () => window.removeEventListener("resize", updateSize);
   }, []);
 
-  return windowWidth <= 1024 ? 'mobile' : 'desktop';
-}
+  return windowWidth <= 1024 ? "mobile" : "desktop";
+};

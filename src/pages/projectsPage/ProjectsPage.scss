@@ -1,77 +1,79 @@
 .projectsPage {
+  width: 100%;
+  color: #fff;
+  background-color: #181a18;
+
+  &-content {
     width: 100%;
-    color: #fff;
-    background-color: #181A18;
+    height: 100%;
+    min-height: 44rem;
+  }
 
-    &-content {
-        width: 100%;
-        height: 100%;
-        min-height: 44rem;
+  &-filterTabs {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    &-webFilter,
+    &-mobileFilter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.2s;
     }
 
-    &-filterTabs {
-        padding: 0 2rem;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 6rem;
-        text-align: center;
+    &-webFilter {
+      border: 1px solid #6617cb;
+      margin-right: 2rem;
 
-        &-webFilter, &-mobileFilter {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem 2rem;
-            border-radius: 100px;
-            cursor: pointer;
-            transition: all .2s;  
-        }
-
-        &-webFilter {
-            border: 1px solid #6617cb;
-            margin-right: 2rem;
-
-            &--active {
-                background-color: #6617cb;
-            }
-        }
-
-        &-mobileFilter {
-            border: 1px solid #AB3155;
-
-            &--active {
-                background-color: #AB3155;
-            }
-        }
+      &--active {
+        background-color: #6617cb;
+      }
     }
 
-    &-loadingSpinnerContainer {
-        margin: 15rem 0;
-    }
+    &-mobileFilter {
+      border: 1px solid #ab3155;
 
-    &-projectItems {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        opacity: 0;
-        transition: opacity .4s;
-
-        &.display {
-            opacity: 1;
-        }
+      &--active {
+        background-color: #ab3155;
+      }
     }
+  }
+
+  &-loadingSpinnerContainer {
+    margin: 15rem 0;
+  }
+
+  &-projectItems {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    opacity: 0;
+    transition: opacity 0.4s;
+
+    &.display {
+      opacity: 1;
+    }
+  }
 }
 
 @media only screen and (max-width: 1023px) {
-    .projectsPage-filterTabs {
-        &-webFilter, &-mobileFilter {
-            flex: 1;
-            
-            span {
-                max-width: 150px;
-            }
-        }
+  .projectsPage-filterTabs {
+    &-webFilter,
+    &-mobileFilter {
+      flex: 1;
+
+      span {
+        max-width: 150px;
+      }
     }
+  }
 }
