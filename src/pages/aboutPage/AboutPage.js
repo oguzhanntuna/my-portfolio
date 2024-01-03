@@ -93,7 +93,7 @@ const AboutPage = () => {
                   Holiday Inn Club Vacations
                 </span>
               </a>{" "}
-              as a Front-End Team Lead.
+              as a Lead Front-End Developer.
             </p>
             {/* Comment out the margin bottom of aboutPage-currentStatus-statusText */}
             {/* <Link to="contact"><p className="aboutPage-currentStatus-openToWork highlightedText"><span>Open to new opportunities</span> →</p></Link> */}
